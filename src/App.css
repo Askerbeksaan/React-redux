@@ -1,0 +1,388 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+h2{
+  font-size: 36px;
+}
+h1{
+  font-size: 48px;
+}
+h6{
+  font-size: 18px;
+}
+h4{
+  font-size: 24px;
+}
+button{
+  background-color: black;
+  color: white;
+  padding: 8px 24px 8px 24px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.cartBtn{
+  padding: 0px;
+  border-radius: 0px;
+}
+.banner{
+  position: relative;
+}
+.btn_banner{
+  position: absolute;
+  left: 630px;
+  top: 237px;
+  z-index: 1;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  padding: 8px 56px 8px 56px;
+  justify-content: space-between;
+}
+header .block1{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+header .block2{
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.restBackground{
+  padding: 72px 56px 72px 56px;
+}
+.foodCategory{
+  padding: 8px;
+  background-color: rgb(233, 233, 233);
+  color: rgb(99, 99, 99);
+  display: inline-flex;
+  gap: 20px;
+}
+.Restaurants{
+  margin-top: 32px;
+  display: flex;
+  gap: 23px;
+  align-items: start;
+  overflow: hidden;
+}
+.RestaurantCard{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
+  background-color: rgb(249, 249, 249);
+  padding-bottom: 20px;
+}
+.TickerSection{
+  height: 490px;
+  padding-inline: 56px;
+  background-color: rgb(229, 248, 188);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  overflow: hidden;
+}
+.TickerSection h1{
+  margin-top: 112px;
+  max-width: 400px;
+}
+.TickerSection button{
+  margin-top: 50px;
+}
+.miniFoodList{
+  width: 200px;
+  height: 200px;
+}
+.foods-img{
+  width: 104px;
+  height: 104px;
+  border-radius: 50px;
+}
+.foods-list{
+  margin-top: 32px;
+  display: flex;
+  gap: 26px;
+}
+.food-block{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding-top: 46px;
+  background-color: rgb(249, 249, 249);
+}
+footer{
+  background-color: rgb(44, 44, 44);
+  height: 450px;
+  padding-bottom: 250px;
+  display: flex;
+  align-items: end;
+  color: white;
+  box-sizing: border-box;
+}
+footer img{
+  margin-inline: 200px;
+}
+.table{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 160px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.category-block{
+  background-color: rgb(229, 248, 188);
+  text-align: center;
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+.menu-txt{
+  margin-top: 30px;
+  max-width: 765px;
+}
+.food-img-block{
+  position: relative;
+  border-radius: 8px;
+}
+.food-img-block img{
+  width: 427px;
+  height: 309px;
+}
+.food-img-block p{
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  color: white;
+  background-color: black;
+}
+.menu-list{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 24px;
+}
+.singleBanner{
+  height: 242px;
+  position: relative;
+  overflow: hidden;
+}
+.singleFoodBanner{
+  width: 1440px;
+}
+.singleTxtBanner{
+  position: absolute;
+  left: 664px;
+  top: 89px;
+  color: white;
+}
+.grid-block{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+.card{
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+input{
+  padding: 16px;
+  background-color: ghostwhite;
+  display: block;
+  font-size: 18px;
+  width: 794px;
+}
+.short{
+  width: 360px;
+}
+label{
+  font-size: 18px;
+  display: block;
+}
+.greenblock{
+  padding: 56px;
+  height: 200px;
+  background-color: rgb(229, 248, 188);
+  z-index: -1;
+}
+.form-block{
+  box-sizing: border-box;
+  width: 860px;
+  padding: 24px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 32px;
+  position: absolute;
+  left: 56px;
+  top: 200px;
+  background-color: white;
+}
+.form-block button{
+  align-self: flex-start;
+}
+.head{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.head h4{
+  padding-bottom: 16px;
+  padding-right: 97px;
+  border-bottom: 3px solid black;
+}
+.inputs{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.miniOrder{
+  box-sizing: border-box;
+  padding: 24px;
+  background-color: white;
+  width: 400px;
+  position: absolute;
+  top: 200px;
+  right: 56px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Last-txt{
+  text-align: center;
+  margin-top: 55px;
+}
+
+.myOrder{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  height: 300px;
+}
+.myOrder .miniOrder{
+  background-color: white;
+  width: 400px;
+  position:inherit;
+  top: auto;
+  right: auto;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal{
+  position: absolute;
+  left: 18vw;
+  top: 60vh;
+  width: 652px;
+  height: 277px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 24px;
+  background-color: lightgray;
+  border: solid black 1px;
+}
+.modal h2{
+  margin-top: 16px;
+}
+.modal h4{
+  margin-top: 10px;
+  font-weight: lighter;
+}
+.modal span,button{
+  font-size: 24px;
+}
+.right-btn{
+  position: absolute;
+  right: 24px;
+  background-color: gray;
+  border: none;
+  color: black;
+}
+.quant{
+  margin-top: 40px;
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-btn{
+  padding:16px 24px;
+  border-radius: 50px;
+  background-color: gray;
+  border: none;
+  color: black;
+}
+.long-btn{
+  padding: 24px 160px 24px 160px;
+  border-radius: 10px;
+}
+
+.orderHeader{
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 36px;
+  position: relative;
+  top: -24px;
+  left: -24px;
+  border-radius: 10px;
+  width: 348px;
+}
+.order{
+  position: absolute;
+  top: 50vh;
+  right: 6vw;
+  z-index: 1;
+  width: 420px;
+  min-height: 600px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 24px;
+  background-color: lightgray;
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.order button{
+  font-size: 20px;
+}
+.oneOrder button{
+  background-color: gray;
+  border: none;
+  color: black;
+  position: absolute;
+  right: 0px;
+}
+.oneOrder{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+.flexing{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.flexing h4{
+  border-bottom: none;
+}
+.flexing button{
+  font-size: 20px;
+  padding: 24px 140px 24px 140px;
+}
