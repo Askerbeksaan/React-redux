@@ -7,7 +7,11 @@ import { useGetCategoriesQuery } from "../api/post";
 export default function CategoryFood(){
     const { id } = useParams()
     const {data,isLoading} = useGetCategoriesQuery()
-    if(isLoading){<p>Идет загрузка...</p>}
+    if(isLoading){
+        return(
+            <p>Идет загрузка...</p>
+        )
+    }
     const singleFood = data.data.filter(food=> food.id===parseInt(id))
     return(
         <div>

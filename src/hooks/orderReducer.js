@@ -7,34 +7,37 @@ export const orderSlice = createSlice({
         selectedItem: 0,
         close: null,
         showOrder: 0,
+        quantity: 0,
+        sum: 0,
     },
     reducers: {
         setClose: (state,action) => {
-            if(action.payload[0].title==state.showOrder[0].title){
-                state.showOrder=state.close
+            if(action.payload instanceof Array || action.payload==0){
+                state.showOrder = null
             }
-            if(action.payload.title==state.selectedItem.title){
-                state.selectedItem=state.close
+            if(action.payload instanceof Object){
+                state.selectedItem = null
             }
-
         },
         setSelectedItem: (state, action) => {
             state.selectedItem = action.payload
+            state.quantity =0
         },
         setShowOrder: (state, action) => {
             state.showOrder = action.payload
         },
         increase: (state, action) => {
-            state.selectedItem.id +=1
-            state.selectedItem.quantity = action.payload
-            state.selectedItem.sum = action.payload*2
+            state.selectedItem.quantity = action.payload + 1
+            state.quantity = state.selectedItem.quantity
+            state.price = state.quantity * state.selectedItem.id
+            state.selectedItem.price = state.price
         },
         decrease: (state, action) => {
-            state.selectedItem.id -=1
-            state.selectedItem.quantity = action.payload
-            state.selectedItem.sum = action.payload*2
-            if(state.selectedItem.id<=0){
-                state.selectedItem.id = 0
+            state.quantity = action.payload - 1
+            state.selectedItem.quantity = state.quantity 
+            state.selectedItem.price = state.selectedItem.quantity*state.selectedItem.id
+            if(state.quantity<=1){
+                state.quantity = 1
             }
         },
         setData: (state , action) => {
@@ -43,6 +46,6 @@ export const orderSlice = createSlice({
         },
     },
 })
-export const { setData, setSelectedItem, increase,decrease,setShowOrder, setClose } = orderSlice.actions
+export const { setData, setSelectedItem, increase,decrease,setShowOrder, setClose, quantity } = orderSlice.actions
 
 export default orderSlice.reducer

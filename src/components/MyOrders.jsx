@@ -8,12 +8,12 @@ export default function MyOrders(){
                 <div>
                     {
                         data.map(order=> {
-                            sumPrice+=order.sum
+                            sumPrice+=order.price
                             return(
                                 <div key={order.title} className='head'>
                                     <h3>{order.quantity}</h3>
                                     <h3>{order.title}</h3>
-                                    <h3>{order.sum}$</h3>
+                                    <h3>{order.price}$</h3>
                                 </div>
                             )
                             }

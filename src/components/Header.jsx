@@ -32,14 +32,14 @@ export default function Header() {
                         </div>
                         {
                         data.map(order => {
-                            summer+=order.sum
+                            summer+=order.price
                             return(
                             <Orders 
                                 key={order.title}
                                 heading={order.title}
                                 description={order.title}
                                 quantity={order.quantity}
-                                sum={order.sum}
+                                sum={order.price}
                         />)
                             }
                         )}

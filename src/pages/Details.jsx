@@ -12,13 +12,22 @@ import { increase, setSelectedItem, decrease, setData, setClose } from '../hooks
 function Details() {
     const dispatch = useDispatch()
     const selectedItem = useSelector((state) => state.order.selectedItem)
+    const quant = useSelector((state) => state.order.quantity)
+    const price = useSelector((state) => state.order.price)
     const { id } = useParams();
     const {data,isLoading} = useGetFoodQuery()
-    if(isLoading){<p>Идет загрузка...</p>}
-
+    const {data: foods, isLoad } = useGetCategoriesQuery()
+    if(isLoading){
+        return(
+            <p>Идет загрузка...</p>
+        )
+    }
+    if(isLoad){
+        return(
+            <p>Идет загрузка...</p>
+        )
+    }
     const singleRest = data.data.filter(rest=> rest.id==parseInt(id))
-    const {data: foods , isLoad } = useGetCategoriesQuery()
-    if(isLoad){<p>Идет загрузка...</p>}
     return(
         <div>
             <Header />
@@ -61,9 +70,9 @@ function Details() {
                         heading={selectedItem.title}
                         description={selectedItem.title}
                         quantity={selectedItem.quantity}
-                        sum={selectedItem.sum}
-                        increase={()=>dispatch(increase(selectedItem.id))}
-                        decrease={()=>dispatch(decrease(selectedItem.id))}
+                        sum={selectedItem.price}
+                        increase={()=>dispatch(increase(quant))}
+                        decrease={()=>dispatch(decrease(quant))}
                         addOrder={()=>dispatch(setData(selectedItem))}
                         closing={()=>dispatch(setClose(selectedItem))}
                     />

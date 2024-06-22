@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 export default function Categories(){
     const {data , isLoading} = useGetCategoriesQuery()
-    console.log(data)
     if(isLoading){
         return(
             <p>Идет загрузка...</p>
