@@ -18,7 +18,7 @@ export const postApi = createApi({
         }), 
         getMeal: builder.query({
             queryFn: async () => {
-                const data = await supabase.from("restaurants") .select('food (id, name, price, description)')
+                const data = await supabase.from("food") .select('*')
                 return { data: data }
             }
         }), 
@@ -28,7 +28,7 @@ export const postApi = createApi({
                 return { data: data }
             }
         }),   
-        addPost: builder.mutation({
+        createOrder: builder.mutation({
             query: ({ body }) => ({
                 url: '/posts',
                 method: 'POST',
@@ -38,4 +38,4 @@ export const postApi = createApi({
     })
 })
 
-export const { useGetPostsQuery, useGetPostByIdQuery, useGetFoodQuery, useGetMealQuery, useAddPostMutation, useGetCategoriesQuery } = postApi;
+export const { useGetPostsQuery, useGetPostByIdQuery, useGetFoodQuery, useGetMealQuery, useGetCategoriesQuery, useCreateOrderMutation  } = postApi;

@@ -32,21 +32,21 @@ export default function Header() {
                         </div>
                         {
                         data.map(order => {
-                            summer+=order.price
+                            summer+=order.sum
                             return(
                             <Orders 
-                                key={order.title}
-                                heading={order.title}
-                                description={order.title}
+                                key={order.name}
+                                heading={order.name}
+                                description={order.description}
                                 quantity={order.quantity}
-                                sum={order.price}
+                                sum={order.sum}
                         />)
                             }
                         )}
                         <div className='flexing'>
                             <div className='head'>
                                 <h4>Total</h4>
-                                <h4 className='lighter'>{summer}</h4>
+                                <h4 className='lighter'>{summer}$</h4>
                             </div>
                             <Link to='/Forms'>
                                 <button>Checkout</button>
