@@ -15,13 +15,8 @@ function Details() {
     const sum = useSelector((state) => state.order.sum)
     const { id } = useParams();
     const {data,isLoading} = useGetFoodQuery()
-    const {data: foods, isLoad } = useGetMealQuery()
-    if(isLoading){
-        return(
-            <p>Идет загрузка...</p>
-        )
-    }
-    if(isLoad){
+    const {data: foods, isLoading: isLoad } = useGetMealQuery()
+    if(isLoading || isLoad){
         return(
             <p>Идет загрузка...</p>
         )
