@@ -6,7 +6,7 @@ export const orderSlice = createSlice({
         data: [],
         selectedItem: 0,
         close: null,
-        showOrder: 0,
+        showOrder: null,
         quantity: 1,
         sum: 0
     },
